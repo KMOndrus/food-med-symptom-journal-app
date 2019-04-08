@@ -1,16 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
+import JournalContainer from './Containers/JournalContainer';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          This is my app
-        </header>
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className="App">
+      <JournalContainer />
+    </div>
+  );
+};
 
 export default App;
