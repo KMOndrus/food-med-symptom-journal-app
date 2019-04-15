@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 const App = () => {
   return (
     <React.Fragment>
-      <AppBar id='journal-app-bar' position="static" color="default">
+      <AppBar id="journal-app-bar" position="static" color="default">
         <Toolbar>
           <Typography variant="h4">
             Food, Medication, and Symptom Journal
