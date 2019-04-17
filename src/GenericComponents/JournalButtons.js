@@ -5,11 +5,13 @@ import PropTypes from 'prop-types';
 
 const styles = () => ({
   button: {
-    padding: 10
+    padding: 15,
+    marginTop: 20,
+    marginBottom: 20
   }
 });
 
-const JournalButtons = (props) => {
+const JournalButtonsComponent = (props) => {
   const { classes } = props;
   return (
     <Button
@@ -21,9 +23,13 @@ const JournalButtons = (props) => {
   )
 };
 
-JournalButtons.propTypes = {
-  classes: PropTypes.shape({}).isRequired,
+JournalButtonsComponent.propTypes = {
+  classes: PropTypes.shape({}),
 };
 
-export { JournalButtons }
-export default withStyles(styles)(JournalButtons);
+JournalButtonsComponent.defaultProps = {
+  classes: {},
+};
+
+export { JournalButtonsComponent };
+export default withStyles(styles)(JournalButtonsComponent);
