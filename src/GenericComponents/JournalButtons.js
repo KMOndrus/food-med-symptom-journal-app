@@ -7,7 +7,9 @@ const styles = () => ({
   button: {
     padding: 15,
     marginTop: 20,
-    marginBottom: 20
+    marginBottom: 20,
+    marginLeft: 10,
+    marginRight: 10,
   }
 });
 
@@ -18,17 +20,14 @@ const JournalButtonsComponent = (props) => {
       variant="contained"
       className={classes.button}
     >
-      Button
+      { props.buttonText }
     </Button>
   )
 };
 
 JournalButtonsComponent.propTypes = {
-  classes: PropTypes.shape({}),
-};
-
-JournalButtonsComponent.defaultProps = {
-  classes: {},
+  classes: PropTypes.shape({}).isRequired,
+  buttonText: PropTypes.string.isRequired,
 };
 
 export { JournalButtonsComponent };

@@ -1,12 +1,17 @@
 import React from 'react';
 import { JournalButtonsComponent } from './JournalButtons';
 import Button from '@material-ui/core/Button';
-import { createShallow, createMount } from '@material-ui/core/test-utils';
+import { mount } from 'enzyme';
+
+const props = {
+  classes: {},
+  buttonText: 'Sample Text',
+};
 
 describe('JournalButtons', () => {
   it('displays the button text sent in with props', () => {
-    const wrapper = createMount(<JournalButtonsComponent />);
+    const wrapper = mount(<JournalButtonsComponent { ...props } />);
 
-    expect((wrapper.dive().find(Button)).text()).toEqual("Add");
+    expect((wrapper.find(Button)).text()).toEqual(props.buttonText);
   });
 });
